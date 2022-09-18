@@ -10,8 +10,8 @@ class FundController extends Controller
     {
         $validator = validator()->make($request->all() , [
 
-            'sender_id' => 'required' ,
-             'receiver_id' => 'required', 
+            'sender_account_number' => 'required' ,
+             'receiver_account_number' => 'required', 
              'amount' => 'required' ,
              'currency_id' => 'required'
          ]);
@@ -21,8 +21,8 @@ class FundController extends Controller
          }
     //! curl
     $Fields = array(
-        'sender_id' => $request->sender_id,
-        'receiver_id' => $request->receiver_id ,
+        'sender_account_number' => $request->sender_account_number,
+        'receiver_account_number' => $request->receiver_account_number ,
         'amount' => $request->amount , 
         'currency_id' => $request->currency_id ,
     );
